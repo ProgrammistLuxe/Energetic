@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-Home_Admin_Controller",
+      "appliesTo": "Energetic/Controllers/Home_Admin_Controller.cs",
+      "type": "launch"
+    }
+  ]
+}

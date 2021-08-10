@@ -1,0 +1,184 @@
+﻿@using Energetic.Models.Club.Team
+@model List<Team>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    @{
+        Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    }
+
+    @Styles.Render("~/Content/ENERGETIC-ADMIN_STYLES/Club_styles/Statistics_style.css")
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="all">
+
+        @* всплывающее окно*@
+        <section class="popup_block" id="popup_show_1">
+            <section class="close_btn" id="close_btn_1"><img src="~/images/delete.png" max-width="48px" /></section>
+
+            <section class="popup" id="popup_add_1">
+                <h2>Год</h2>
+                <input type="text" name="year" placeholder="Введите год" />
+                <h2>Игры</h2>
+                <input type="text" name="games" placeholder="Введите кол-во игр" />
+                <h2>Победы</h2>
+                <input id="input_1" type="text" name="victories" placeholder="Введите кол-во побед" />
+                <h2>Ничьи</h2>
+                <input type="text" name="daraws" placeholder="Введите кол-во ничьих" />
+                <h2>Поражения</h2>
+                <input type="text" name="defeat" placeholder="Введите кол-во поражений" />
+                <h2>Забитые Пропущенные</h2>
+                <input type="text" name="goals" placeholder="Введите голы" />
+                <h2>Очки</h2>
+                <input type="text" name="points" placeholder="Введите кол-во очков" />
+                <h2>Место</h2>
+                <input type="text" name="place" placeholder="Введите итоговое место" />
+                <section class="popup_inputs_2">
+                    <section class="popup_inputs_2_section">
+                        <h2>Лучший бомбардир</h2>
+                        <input type="text" name="forward" placeholder="Введите лучшего бомбардира" />
+                    </section>
+                    <section class="popup_inputs_2_section">
+                        <h2>Голы</h2>
+                        <input id="special_input" type="text" name="goals" placeholder="" />
+                    </section>
+                </section>
+                <button class="btn_add_popup">Добавить</button>
+            </section>
+
+
+
+            <section class="popup" id="popup_edit_1">
+                <h2>Год</h2>
+                <input type="text" name="year" placeholder="2020" />
+                <h2>Игры</h2>
+                <input type="text" name="games" placeholder="13" />
+                <h2>Победы</h2>
+                <input id="input_1" type="text" name="victories" placeholder="13" />
+                <h2>Ничьи</h2>
+                <input type="text" name="daraws" placeholder="0" />
+                <h2>Поражения</h2>
+                <input type="text" name="defeat" placeholder="0" />
+                <h2>Забитые Пропущенные</h2>
+                <input type="text" name="goals" placeholder="13-0" />
+                <h2>Очки</h2>
+                <input type="text" name="points" placeholder="39" />
+                <h2>Место</h2>
+                <input type="text" name="place" placeholder="1" />
+                <section class="popup_inputs_2">
+                    <section class="popup_inputs_2_section">
+                        <h2>Лучший бомбардир</h2>
+                        <input type="text" name="forward" placeholder="Брэйтуэйт" />
+                    </section>
+                    <section class="popup_inputs_2_section">
+                        <h2>Голы</h2>
+                        <input id="special_input" type="text" name="goals" placeholder="10000" />
+                    </section>
+                 </section>
+            
+              <button class="btn_add_popup">Редактировать</button>
+            </section>
+
+        </section>
+
+
+
+
+        @* всплывающее окно*@
+
+
+
+        <section id="content">
+
+            <section class="container">
+                <section class="row">
+                    <section class="col-lg-12 col-sm-12 col-md-12 col-12">
+                        <section class="fullName">
+                            Клуб
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section id="header_multimedia">
+                <a href="@Url.Action("Global_info","Home")" class="header_item">Общая информация</a>
+                <a class="header_item_active">Статистика клуба</a>
+                <a href="@Url.Action("Contacts_admin","Home")" class="header_item" >Контакты</a>
+                <a href="@Url.Action("History","Home")" class="header_item" >История</a>
+                <a href="@Url.Action("Stadium","Home")" class="header_item">Стадион</a>
+
+            </section>
+
+            <button class="btn_add" id="btn_add_1">Добавить</button>
+            <section class="edit">
+                @foreach (Team el in Model)
+                {
+                     <section class="change">
+                        <section class="row">
+
+                           <section class=" col-lg-3 col-md-3 col-sm-3 col-3 player_info player_card">
+                               <section class="player_data">
+                                    <p class="data">@el.Year</p>
+                                    <p class="data_name">год</p>
+                               </section>
+                          </section>
+
+                           <section class=" col-lg-6 col-md-6 col-sm-6 col-6 player_info player_card">
+                             
+                           </section>
+
+                            <section class="col-lg-3 col-md-3 col-sm-3 col-3  player_info" id="buttons">
+                                <button class="btn_edit">Редактировать</button>
+                                <button class="btn_delete">Удалить</button>
+                            </section>
+                        </section>
+                     </section>
+
+                }
+                <section class="change">
+                    <section class="row">
+
+                        <section class=" col-lg-3 col-md-3 col-sm-3 col-3 player_info player_card">
+                            <section class="player_data">
+                                <p class="data">2020</p>
+                                <p class="data_name">год</p>
+                            </section>
+                        </section>
+
+                        <section class=" col-lg-6 col-md-6 col-sm-6 col-6 player_info player_card">
+                        </section>
+
+                        <section class="col-lg-3 col-md-3 col-sm-3 col-3  player_info" id="buttons">
+                            <button class="btn_edit" id="btn_edit_1">Редактировать</button>
+                            <button class="btn_delete">Удалить</button>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+
+
+        </section>
+
+
+       <script src="~/Scripts/ENERGETIC-ADMIN_SCRIPTS/Club_scripts/Statistics.js"></script>
+    </section>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,151 @@
+﻿a{
+    text-decoration:none !important;
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    margin-bottom: 1em;
+    overflow: visible;
+    z-index: 3;
+    border-bottom: 7px solid #FFFFFF;
+    background: #EEF0FF;
+}
+.row{
+    padding-left:0 !important;
+    padding-right:0 !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+
+}
+.logo_main{
+    display:flex;
+    align-items:center;
+    margin-right:1.5em;
+   
+}
+.menu{
+    padding-top:6.3em;
+    margin-right:1.9em;
+}
+#logo_p {
+    font-style: normal;
+    font-weight: normal;
+    flex-wrap:nowrap !important;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: #14056C;
+}
+
+.menu a {
+    position: relative !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    align-items: baseline !important;
+    text-align: center !important;
+    color: #14056C !important;
+}
+
+
+/*.header_item:hover, :active{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 3.7em !important;
+    border-bottom: 3px solid #14056C;
+    color: #14056C;
+}*/
+
+.menu a:hover {
+    border-bottom: 3px solid #14056C !important;
+    cursor: pointer !important;
+    font-size: 24px !important;
+    margin-top: 3.5em !important;
+}
+
+.logo_exit{
+    align-items:center;
+    margin-top:2em !important;
+}
+.logo_exit img{
+    float:right;
+     
+}
+    .logo_exit img:hover{
+        cursor:pointer;
+    }
+  /*  ----------------------------------------------------*/
+   /* @media(max-width:420px){
+        .logo_main {
+            display: flex;
+            align-items: center;
+            margin-right: 0.5em;
+        }
+        #logo_p {
+            font-style: normal;
+            font-weight: normal;
+            flex-wrap: nowrap !important;
+            font-size: 18px;
+            align-items: center;
+            text-align: center;
+            color: #14056C;
+        }
+        .logo_main img {
+           height:80px;
+           width:80px;
+        }
+        .header_main span {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            text-align: center;
+            border-bottom: 3px solid #14056C;
+            color: #14056C;
+        }
+        .menu {
+            padding-top: 6.3em;
+            margin-right:1.5em;
+
+                 }
+        .header_main {
+            padding-top:3em;
+           
+        }
+        .menu span {
+            position: relative;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            align-items: baseline;
+            text-align: center;
+            color: #14056C;
+        }
+        .menu span:hover {
+            border-bottom: 3px solid #14056C;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 1em !important;
+        }
+        .logo_exit img {
+            width:33px;
+            height:33px;
+        }
+        .logo_exit {
+            align-items: center;
+            margin-top: 2em !important;
+
+        }
+
+        
+    }
+
+*/

@@ -1,0 +1,99 @@
+﻿@using Energetic.Models.Club.Video
+@model List<Video>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    @{
+        Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    }
+
+    @Styles.Render("~/Content/ENERGETIC-ADMIN_STYLES/Multimedia_styles/Video.css")
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="all">
+
+        @* всплывающее окно*@
+
+
+        <section class="popup_block" id="popup_show_1">
+            <section class="close_btn" id="close_btn_1"><img src="~/images/delete.png" max-width="48px" /></section>
+
+
+            <section class="popup" id="popup_add_1">
+                <h1>Название</h1>
+                <input id="input_1" type="text" name="video" placeholder="Введите название видео" />
+                <h1>Ссылка</h1>
+                <input id="input_2" type="text" name="link" placeholder="Введите ссылку на видео youtube" />
+                <button class="btn_add_popup">Добавить</button>
+
+            </section>
+
+        </section>
+
+
+
+
+        @* всплывающее окно*@
+
+        <section id="content">
+            <section class="container">
+                <section class="row">
+                    <section class="col-lg-12 col-sm-12 col-md-12 col-12">
+                        <section class="fullName">
+                            Мультимедиа
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section id="header_multimedia">
+                <a href="@Url.Action("Gallery","Home")" class="header_item">Галерея</a>
+                <a class="header_item_active">Видео</a>
+            </section>
+
+            <section class="edit">
+                <button class="btn_add" id="btn_add_1">Добавить</button>
+                @foreach (Video el in Model)
+                {
+                <section class="change">
+                    <section class="row">
+
+                        <section class=" col-lg-8 col-md-8 col-sm-6 col-6 change_field">
+                            <p class="album_name">@el.Name</p>
+                            <p class="field_name">Название</p>
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-sm-12 col-12  change_field" id="buttons">
+                            <button class="btn_delete">Удалить</button>
+                        </section>
+                    </section>
+                </section>
+                }
+            </section>
+
+
+        </section>
+
+
+        <script src="~/Scripts/ENERGETIC-ADMIN_SCRIPTS/Multimedia_scripts/video.js"></script>
+
+
+    </section>
+
+
+
+
+</body>
+</html>
+

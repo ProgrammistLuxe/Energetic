@@ -1,0 +1,397 @@
+﻿/*---------DOCUMENT--------------*/
+body,html {
+    height: 100% !important;
+    width: 100% !important;
+}
+body {
+    font-family: 'Roboto', sans-serif !important;
+    text-decoration: none !important;
+    width: 100% !important;
+    background-color: #EEF0FF !important;
+    margin: 0 0 0 0 !important;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+.row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin:0 0 0 0 !important;
+}
+/*----------HEADER-------------*/
+
+
+/*----------FUULNAME-------------*/
+
+container {
+    position: relative;
+    margin-top:-2em;
+    margin-bottom: 6em;
+    width: 100%;
+}
+/*.btn_add:active body{
+    filter:blur(6px);
+}*/
+.fullName {
+    text-align: center;
+    justify-content: center;
+    position: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    text-align: center;
+    color: #14056C;
+}
+/*popup*/
+.popup_block{
+    position:fixed;
+    display:none;
+    top:3em;
+    width:100%;
+    height:auto;
+    justify-content:center;
+    z-index:20;
+}
+.close_btn {
+    position: absolute;
+    left: 50%;
+    margin-left:200px;
+   
+}
+
+    .close_btn:hover {
+        cursor: pointer;
+    }
+
+.popup {
+    position:absolute;
+    margin-top:3em;
+    padding-top:5em;
+    left:50%;
+    display:none;
+    width: 360px;
+    height: 484px;
+    margin-left:-180px;
+    justify-content:center;
+    background: #FFFFFF;
+    border: 3px solid #14056C;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+    .popup h1 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center;
+        color: #14056C;
+        margin-bottom: 0.7em;
+    }
+    .popup input {
+        position: relative;
+        margin-bottom: 3em;
+        margin-left: 2.5em;
+        text-align: center;
+        width: 277px;
+        height: 30px;
+        border: 1px solid #14056C;
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: #14056C;
+    }
+.popup input::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #14056C;
+}
+.popup input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.btn_add_popup {
+    margin-left: 7.5em;
+    margin-top:3em;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+.line {
+    position: relative;
+    width: 100%;
+    height: 0;
+    top: 4em;
+    margin-bottom: 7em !important;
+    border: 7px solid #FFFFFF;
+}
+
+.sponsor_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #14056C;
+}
+
+    .change_fullName {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;
+        color: #14056C;
+    }
+
+
+
+
+
+/*popup*/
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+    width: 100%;
+    margin-top: 300px;
+}
+
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+    margin-top:16em;
+}
+
+#all {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+/*----------WORKPLACE-------------*/
+.element {
+    padding: 20px 20px;
+    width: 100%;
+    color: #14056C;
+    font-size: 1.5em;
+}
+#team_photo {
+    position:relative;
+    margin-top:4em;
+    justify-content:center;
+    align-items:center;
+   
+}
+.team_photo_hidden_block {
+    position: absolute;
+    display: none;
+    width: 120px;
+    height: 80px;
+    padding: 4px 0 4px 0;
+     left:50%;
+     margin-left:10em;
+    margin-top:-2em;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    background: #D7CDFF;
+    color: rgba(20, 5, 108, 0.48);
+}
+
+.url {
+    padding: 20px;
+}
+.album {
+    position:relative;
+    overflow: hidden;
+    left:50%;
+    width: 507px;
+    margin-left:-253.5px;
+    height: 214px;
+}
+
+.img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.hidden {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    width: 507px;
+    height: 214px;
+}
+
+.hidden_item {
+    position: relative;
+    width: 289px;
+    height: 107px;
+    border: 4px solid #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    display: none;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+    .hidden_item p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 1.5em;
+        color: #FFFFFF;
+    }
+
+.album:hover .hidden_item {
+    display: block;
+    transition: 7s ease-in-out;
+    cursor:pointer;
+}
+
+.album:hover .hidden {
+    background-color: rgba(0,0,0,.5);
+}
+
+.row {
+}
+.edit {
+    width: 100%;
+    height:auto;
+    padding: 0 30px 0 30px;
+    margin-top:6em;
+    height:auto;
+    margin-bottom:7em;
+}
+.change {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0 10px 0;
+    margin-bottom: 3em;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.cup {
+    margin-bottom: 1em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #14056C;
+}
+.tournament_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C;
+ 
+}
+.trophy_number {
+    margin-bottom: 1em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #14056C;
+    
+}
+.trophy_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C;
+}
+.btn_edit_1 {
+    margin-bottom: 1em;
+    position: relative;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn_edit_2 {
+    margin-bottom: 1em;
+    position: relative;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn_delete {
+    position: relative;
+    background: #AF0808;
+    border-radius: 10px;
+    width: 140px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+#buttons{
+    justify-content:center;
+    align-items:center;
+    float:right;
+    display:flex;
+    flex-direction:column;
+}
+.btn_add {
+    margin-bottom: 2.5em;
+    margin-left: 80%;
+    margin-right: 0em;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+

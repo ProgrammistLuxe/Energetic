@@ -1,0 +1,93 @@
+﻿@using Energetic.Models.Club.MainPhotoUsualInformations;
+@model MainPhotoUsualInformation
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @{
+        Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    }
+
+    @Styles.Render("~/Content/ENERGETIC-ADMIN_STYLES/Club_styles/Global_info_style.css")
+    <meta charset="UTF-8">
+    <title>Global information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="all">
+
+
+        <section id="content">
+
+            <section class="container">
+                <section class="row">
+                    <section class="col-lg-12 col-sm-12 col-md-12 col-12">
+                        <section class="fullName">
+                            Клуб
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section id="header_multimedia">
+                <a class="header_item_active">Общая информация</a>
+                <a href="@Url.Action("Statistics","Home")" class="header_item">Статистика клуба</a>
+                <a href="@Url.Action("Contacts_admin","Home")" class="header_item">Контакты</a>
+                <a href="@Url.Action("History","Home")" class="header_item">История</a>
+                <a href="@Url.Action("Stadium","Home")" class="header_item">Стадион</a>
+
+            </section>
+
+            <section class="edit">
+
+                <section class="change">
+                    <section class="row">
+                        <section class="col-lg-12 col-md-12 col-sm-12 col-12 global_info">
+                            <p>@Model.Value </p>
+
+                        </section>
+
+                    </section>
+
+                </section>
+
+
+               
+                <section class="change_photo">
+                    <section id="hidden_block" class="change_photo_hidden_block">Рекомендуемое разрешение: (1400:700)</section>
+                    <section class="image" id="photo_block">
+                        <img class="img" src="@Url.Content(Model.Photo)" />
+                        <section class="hidden">
+                            <section class="hidden_item">
+                                <p>Выбрать фото</p>
+                            </section>
+                        </section>
+                    </section>
+
+
+                </section>
+                    <button class="btn_save">Сохранить</button>
+
+
+                </section>
+
+
+            </section>
+
+
+        <script src="~/Scripts/ENERGETIC-ADMIN_SCRIPTS/Club_scripts/Global_info.js"></script>
+
+    </section>
+
+
+
+</body>
+</html>
+

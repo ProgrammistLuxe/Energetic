@@ -1,0 +1,142 @@
+﻿body.html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: #EEF0FF;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+#all {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+/*.autorithation_field{
+
+    flex-direction:column;
+    display:flex;
+    height:auto;
+
+}*/
+.autorithation_field input {
+    position: relative;
+    margin-bottom: 1.2em;
+    text-align: center;
+    width: 277px;
+    height: 30px;
+    border: 1px solid #14056C;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #14056C;
+}
+
+#input_2 {
+    position: relative;
+    overflow: visible;
+}
+
+#password {
+    position: relative;
+}
+
+img {
+    position: absolute;
+    float: right;
+    z-index: 20;
+    margin-top: 5px;
+    margin-left: 0.5em;
+}
+
+    img:hover {
+        cursor: pointer;
+    }
+
+.autorithation_field :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.autorithation_field input::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #14056C;
+}
+
+#btn {
+    position: relative;
+    background: #14056C;
+    border-radius: 15px;
+    width: 160px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #14056C;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+#eye:hover {
+    cursor: pointer;
+}
+
+#wrong {
+    display: none;
+    color: rgba(246, 16, 16, 1);
+    text-align: center;
+    font-weight: bold;
+}
+
+.header {
+    position: relative;
+    margin-top: 60px;
+    padding: 60px;
+    width: 100%;
+}
+
+.autorithation_field {
+    color: #14056C;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*.wrong {
+    color: rgba(246, 16, 16, 1);
+    text-align: center;
+    font-weight: bold;
+}*/

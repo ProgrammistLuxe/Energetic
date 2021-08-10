@@ -1,0 +1,470 @@
+﻿/*---------DOCUMENT--------------*/
+body, html {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    text-decoration: none !important;
+    width: 100% !important;
+    background-color: #EEF0FF !important;
+    margin: 0 0 0 0 !important;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 0 0 0 !important;
+}
+/*----------HEADER-------------*/
+
+
+/*----------FUULNAME-------------*/
+
+container {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 6em;
+    width: 100%;
+}
+
+.fullName {
+    font-size: 2.0em;
+    color: #14056C;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*popup*/
+.popup_block {
+    position: fixed;
+    display: none;
+    top:0.5em;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    z-index: 20;
+}
+
+.close_btn {
+    position: absolute;
+    left: 50%;
+    margin-left: 320px;
+}
+
+    .close_btn:hover {
+        cursor: pointer;
+    }
+
+.popup {
+    position: absolute;
+    margin-top: 2em;
+    left: 50%;
+    display: none;
+    width: 486px;
+    height:600px;
+    margin-left: -243px;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 3px solid #14056C;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+    .popup h1 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        text-align: center;
+        color: #14056C;
+        margin-bottom: 0.7em;
+    }
+
+    .popup input {
+        position: relative;
+        margin-left: 8.2em;
+        margin-bottom:0.3em;
+        text-align: center;
+        width: 227px;
+        height: 30px;
+        border: 1px solid #14056C;
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: #14056C;
+    }
+
+.hidden_block_for_PopupImage {
+    position: absolute;
+    display: none;
+    width: 120px;
+    height: 80px;
+    padding: 4px 0 4px 0;
+    left: 50%;
+    margin-left: 5em;
+    margin-top: 1em;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    background: #F1EDFF;
+    color: rgba(20, 5, 108, 0.4);
+}
+        .popup input::placeholder {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            align-items: center;
+            text-align: center;
+            color: #14056C;
+        }
+
+        .popup input:active, :hover, :focus {
+            outline: 0;
+            outline-offset: 0;
+        }
+
+.btn_add_popup {
+    float: right;
+    margin-right: 2em;
+    margin-top: 5em;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+.change_fullName {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C;
+}
+
+
+.popup_image {
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin-left: 11.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 60px;
+}
+
+.popup_img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.hidden {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden_item {
+    position: relative;
+    width: 289px;
+    height: 107px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    display: none;
+    z-index: 3;
+}
+
+    .hidden_item img {
+        width: 55px;
+        height: 55px;
+        margin-top: 1.5em;
+    }
+
+.popup_image:hover {
+    cursor: pointer;
+}
+
+    .popup_image:hover .hidden_item {
+        display: block;
+        transition: 7s ease-in-out;
+    }
+
+    .popup_image:hover .hidden {
+        background-color: rgba(0,0,0,.5);
+    }
+
+
+.hidden_block {
+    position: absolute;
+    display: none;
+    width: 120px;
+    height: 134px;
+    padding: 4px 0 4px 0;
+    left: 50%;
+    margin-left:-5px;
+    margin-bottom: 0.3em;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    background: #F1EDFF;
+    color: rgba(20, 5, 108, 0.4);
+}
+
+
+
+/*popup*/
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+    width: 100%;
+    margin-top: 300px;
+}
+
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+    margin-top: 16em;
+}
+
+#all {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+/*----------WORKPLACE-------------*/
+#header_multimedia {
+    position: relative;
+    width: 650px;
+    height: auto;
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    float: left;
+    margin-left: 3em;
+}
+
+.header_item {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 2em;
+    font-size: 22px;
+    text-align: center;
+    color: #14056C;
+}
+
+    .header_item:hover {
+        border-bottom: 3px solid #14056C;
+        cursor: pointer;
+        font-size: 24px;
+        color: #14056C !important;
+    }
+
+.header_item_active {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    margin-right: 2em;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #14056C;
+    border-bottom: 3px solid #14056C;
+}
+
+    .header_item_active:hover {
+        color: #14056C !important;
+    }
+
+.element {
+    padding: 20px 20px;
+    width: 100%;
+    color: #14056C;
+    font-size: 1.5em;
+}
+
+.url {
+    padding: 20px;
+}
+
+
+
+.edit {
+    width: 100%;
+    height: auto;
+    padding: 0 30px 0 30px;
+    height: auto;
+    margin-bottom: 7em;
+}
+
+.change {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 4em;
+    padding: 20px 0 10px 0;
+    background: #FFFFFF;
+    border-radius: 7px;
+}
+
+.player_info {
+    align-items: center;
+    display: grid;
+}
+
+.player_card {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.name_field {
+    align-items: center;
+    display: grid;
+}
+
+
+
+.field_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C;
+    display: flex;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    margin-right: 3em;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+
+.img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.data {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #14056C;
+}
+
+.data_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C;
+}
+
+.number {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #14056C;
+}
+
+.number_name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #14056C
+}
+
+.btn_delete {
+    position: relative;
+    background: #AF0808;
+    border-radius: 10px;
+    float: right;
+    width: 140px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#buttons {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_edit {
+    position: relative;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn_add {
+    margin-bottom: 2.5em;
+    margin-left: 80%;
+    margin-right: 0em;
+    background: #14056C;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}

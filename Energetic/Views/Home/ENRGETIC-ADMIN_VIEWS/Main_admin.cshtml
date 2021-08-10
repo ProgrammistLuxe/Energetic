@@ -1,0 +1,169 @@
+﻿@using Energetic.Models.Club.Index;
+@model Index_admin
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @{
+        Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    }
+    @Styles.Render("~/Content/ENERGETIC-ADMIN_STYLES/Main_styles/Main.css")
+    <meta charset="UTF-8">
+    <title>Главнвя</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="all">
+
+
+        @* всплывающее окно*@
+        <section class="popup_block" id="popup_show_1">
+            <section class="close_btn" id="close_btn_1"><img src="~/images/delete.png" max-width="48px" /></section>
+
+
+            <section class="popup" id="popup_add_1">
+                <h1>Турнир</h1>
+                <input id="input_1" type="text" name="tournament" placeholder="Введите название турнира" />
+
+                <h1>Количество трофеев</h1>
+                <input id="input_1" type="text" name="trophy" placeholder="Введите количество трофеев" />
+
+                <button class="btn_add_popup">Добавить</button>
+            </section>
+
+
+            <section class="popup" id="popup_add_2">
+                <h1>Партнёр</h1>
+                <input id="input_1" type="text" name="partner" placeholder="Введите название партнёра" />
+                <h1>Сайт</h1>
+                <input id="input_1" type="text" name="website" placeholder="Введите сайт партнёра" />
+
+                <button class="btn_add_popup" id>Добавить</button>
+            </section>
+        </section>
+
+        <section class="popup_block" id="popup_show_2">
+            <section class="close_btn" id="close_btn_2"><img src="~/images/delete.png" max-width="48px" /></section>
+
+            <section class="popup" id="popup_edit_1">
+                <h1>Турнир</h1>
+                <input id="input_1" type="text" name="tournament" placeholder="Кубок Минска" />
+
+                <h1>Количество трофеев</h1>
+                <input id="input_1" type="text" name="trophy" placeholder="3" />
+
+                <button class="btn_add_popup">Редактировать</button>
+            </section>
+
+
+            <section class="popup" id="popup_edit_2">
+                <h1>Партнёр</h1>
+                <input id="input_1" type="text" name="tournament" placeholder="InnoTechSolutions" />
+                <h1>Сайт</h1>
+                <input id="input_1" type="text" name="website" placeholder="https://intechs.by" />
+
+                <button class="btn_add_popup" id>Редактировать</button>
+            </section>
+        </section>
+      
+
+        @* всплывающее окно*@
+
+    <section id="content">
+        <section class="container">
+            <section class="row">
+                <section class="col-lg-12 col-sm-12 col-md-12 col-12">
+                    <section class="fullName">
+                        Главная
+                    </section>
+                </section>
+            </section>
+        </section>
+        
+        <section id="hidden_block" class="team_photo_hidden_block">Рекомендуемое разрешение: (1400:700)</section>
+        <section id="team_photo">
+            <section class="album" id="photo_block">
+                <img class="img" src="@Url.Content(Model.Photo.Photo)"max-height="214" max-width="507" />
+                <section class="hidden">
+                    <section class="hidden_item" id="hidden">
+                        <p>Выбрать фото</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section class="edit">
+            <button class="btn_add" id="btn_add_1">Добавить</button>
+            @foreach (var el in Model.Cubs)
+            {
+                <section class="change">
+
+                    <section class="row">
+
+
+                        <section class="  col-lg-4 col-md-4 col-sm-6 col-6 change_field">
+                            <p class="cup">@el.Name</p>
+                            <p class="tournament_name">Турнир</p>
+                        </section>
+                        <section class=" col-lg-4 col-md-4 col-sm-6 col-6 change_field">
+                            <p class="trophy_number">@el.Quantity</p>
+                            <p class="trophy_name">Количество трофеев</p>
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-sm-12 col-12  change_field" id="buttons">
+                            <button class="btn_edit_1" >Редактировать</button>
+                            <button class="btn_delete">Удалить</button>
+                        </section>
+
+                    </section>
+
+                </section>
+
+
+            }
+
+
+            </section>
+
+    
+
+        <section class="line"></section>
+
+
+        <section class="edit">
+            <button class="btn_add" id="btn_add_2">Добавить</button>
+            @foreach (var el in Model.Partners)
+            {
+            <section class="change">
+                  <section class="row">
+                      <section class="  col-lg-6 col-md-6 col-sm-12 col-12 change_field">
+                        <p class="sponsor_name">@el.Name</p>
+                        <p class="change_fullName">название</p>
+                      </section>
+
+                      <section class="col-lg-6 col-md-6 col-sm-12 col-12  change_field" id="buttons">
+                        <button class="btn_edit_2">Редактировать</button>
+                        <button class="btn_delete">Удалить</button>
+                      </section>
+                  </section>
+            </section>
+            }
+        </section>
+
+    </section>
+
+
+        <script src="~/Scripts/ENERGETIC-ADMIN_SCRIPTS/Main_scripts/Main_admin.js"></script>
+
+    </section>
+
+
+
+</body>
+</html>
+
